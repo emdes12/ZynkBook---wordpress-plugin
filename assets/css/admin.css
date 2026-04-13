@@ -1,0 +1,433 @@
+.ZAB-admin-wrap {
+	--ZAB-admin-blue: #4fb7ff;
+	--ZAB-admin-blue-dark: #157fce;
+	--ZAB-admin-orange: #ff9a2f;
+	--ZAB-admin-green: #2aa66d;
+	--ZAB-admin-red: #e45555;
+	color: #163047;
+}
+
+.ZAB-admin-wrap h1 {
+	font-size: 2rem;
+	font-weight: 800;
+	margin-bottom: 10px;
+}
+
+.ZAB-admin-wrap .description {
+	font-size: 1rem;
+	color: #54687d;
+	margin-bottom: 18px;
+}
+
+.ZAB-admin-stats-grid {
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	gap: 14px;
+	margin: 18px 0;
+}
+
+.ZAB-admin-action-strip {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 14px;
+	margin: 18px 0 14px;
+}
+
+.ZAB-admin-action-link {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 16px 18px;
+	border: 1px solid #d7e7f4;
+	border-radius: 18px;
+	background: #ffffff;
+	text-decoration: none;
+	color: #163047;
+	box-shadow: 0 12px 28px rgba(0, 81, 110, 0.06);
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.ZAB-admin-action-link:hover,
+.ZAB-admin-action-link:focus-visible {
+	transform: translateY(-1px);
+	box-shadow: 0 16px 32px rgba(0, 81, 110, 0.09);
+	border-color: var(--ZAB-admin-blue);
+	outline: none;
+}
+
+.ZAB-admin-action-link strong {
+	font-size: 1rem;
+	font-weight: 800;
+	color: #14324b;
+}
+
+.ZAB-admin-action-link span {
+	font-size: 0.92rem;
+	color: #5c7186;
+}
+
+.ZAB-admin-stat-card {
+	background: #ffffff;
+	border: 1px solid #d7e7f4;
+	border-radius: 20px;
+	padding: 18px;
+	box-shadow: 0 12px 28px rgba(0, 81, 110, 0.06);
+}
+
+.ZAB-admin-stat-card span {
+	display: block;
+	font-size: 0.85rem;
+	font-weight: 700;
+	color: #5c7186;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	margin-bottom: 10px;
+}
+
+.ZAB-admin-stat-card strong {
+	font-size: 2rem;
+	font-weight: 800;
+	line-height: 1;
+	color: #14324b;
+}
+
+.ZAB-admin-stat-card.is-blue { border-top: 4px solid var(--ZAB-admin-blue); }
+.ZAB-admin-stat-card.is-orange { border-top: 4px solid var(--ZAB-admin-orange); }
+.ZAB-admin-stat-card.is-green { border-top: 4px solid var(--ZAB-admin-green); }
+.ZAB-admin-stat-card.is-red { border-top: 4px solid var(--ZAB-admin-red); }
+
+.ZAB-admin-panel {
+	background: #fff;
+	border: 1px solid #d7e7f4;
+	border-radius: 24px;
+	padding: 20px;
+	box-shadow: 0 18px 40px rgba(0, 81, 110, 0.06);
+}
+
+.ZAB-settings-wrap .ZAB-admin-panel {
+	background: #fbfdff;
+	border-color: #d3e3f1;
+	box-shadow: 0 20px 46px rgba(0, 81, 110, 0.09);
+}
+
+.ZAB-settings-intro {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 18px;
+}
+
+.ZAB-settings-pill {
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 12px;
+	border-radius: 999px;
+	background: #eaf4ff;
+	border: 1px solid #d3e6f7;
+	color: #1f4768;
+	font-size: 0.83rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+}
+
+.ZAB-admin-panel-header {
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.ZAB-admin-panel-header h2 {
+	margin: 0;
+	font-size: 1.45rem;
+	font-weight: 800;
+}
+
+.ZAB-admin-panel-header span {
+	color: #5c7186;
+}
+
+.ZAB-admin-toolbar {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr auto auto;
+	gap: 14px;
+	align-items: end;
+	margin-bottom: 18px;
+}
+
+.ZAB-admin-toolbar label {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+	font-weight: 700;
+	color: #163047;
+}
+
+.ZAB-admin-toolbar input,
+.ZAB-admin-toolbar select,
+.ZAB-settings-form input,
+.ZAB-settings-form select {
+	padding: 12px 14px;
+	border-radius: 14px;
+	border: 1px solid #cfdce8;
+	background: #fff;
+	font: inherit;
+}
+
+.ZAB-settings-form input[type="color"] {
+	min-height: 48px;
+	padding: 6px;
+	width: 100%;
+}
+
+.ZAB-settings-form textarea {
+	width: 100%;
+	padding: 14px;
+	border-radius: 16px;
+	border: 1px solid #cfdce8;
+	background: #fff;
+	font: inherit;
+	min-height: 160px;
+	resize: vertical;
+}
+
+.ZAB-settings-section {
+	padding: 20px;
+	border: 1px solid #dbe8f3;
+	border-radius: 20px;
+	background: #ffffff;
+	margin-bottom: 18px;
+	box-shadow: 0 10px 26px rgba(0, 81, 110, 0.04);
+}
+
+.ZAB-settings-section .ZAB-admin-panel-header {
+	margin-bottom: 14px;
+}
+
+.ZAB-settings-wrap .ZAB-admin-panel-header h2 {
+	font-size: 1.2rem;
+}
+
+.ZAB-textarea-field {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-weight: 700;
+	color: #163047;
+}
+
+.cbs-editor-box,
+.ZAB-editor-box {
+	border: 1px solid #cfdce8;
+	border-radius: 16px;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.cbs-editor-box .wp-editor-container,
+.ZAB-editor-box .wp-editor-container {
+	border: 0;
+}
+
+.cbs-editor-box .wp-editor-area,
+.ZAB-editor-box .wp-editor-area {
+	min-height: 220px;
+}
+
+.cbs-editor-box .quicktags-toolbar,
+.ZAB-editor-box .quicktags-toolbar {
+	border-bottom: 1px solid #e1ebf3;
+	background: #f8fbfe;
+}
+
+.cbs-editor-box .wp-editor-tabs,
+.ZAB-editor-box .wp-editor-tabs {
+	padding-right: 8px;
+}
+
+.ZAB-help-card {
+	padding: 16px 18px;
+	border-radius: 16px;
+	border: 1px solid #d6e6f3;
+	background: #f3f9ff;
+	color: #163047;
+}
+
+.ZAB-help-card ol {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.ZAB-help-card li {
+	margin-bottom: 8px;
+	line-height: 1.45;
+}
+
+.ZAB-help-card p {
+	margin: 8px 0 0;
+}
+
+.ZAB-help-card a {
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.ZAB-help-card a:hover,
+.ZAB-help-card a:focus-visible {
+	text-decoration: underline;
+}
+
+.ZAB-textarea-field-full {
+	grid-column: 1 / -1;
+}
+
+.ZAB-template-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px;
+	margin-top: 12px;
+}
+
+.ZAB-settings-wrap .button.button-primary.button-hero {
+	min-height: 44px;
+	padding: 0 24px;
+	font-weight: 700;
+	border-radius: 10px;
+	background: #006a94;
+	border-color: #00516e;
+	box-shadow: 0 10px 18px rgba(0, 81, 110, 0.18);
+}
+
+.ZAB-settings-wrap .button.button-primary.button-hero:hover,
+.ZAB-settings-wrap .button.button-primary.button-hero:focus-visible {
+	background: #005d82;
+	border-color: #004861;
+}
+
+.ZAB-bookings-table-wrap {
+	overflow: auto;
+}
+
+.ZAB-bookings-table {
+	border-collapse: separate;
+	border-spacing: 0;
+	min-width: 980px;
+}
+
+.ZAB-bookings-table thead th {
+	background: #f3f9ff;
+	color: #163047;
+	font-weight: 800;
+	padding: 14px 12px;
+}
+
+.ZAB-bookings-table tbody td {
+	padding: 16px 12px;
+	vertical-align: top;
+}
+
+.ZAB-patient-name {
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 4px;
+}
+
+.ZAB-secondary-text {
+	color: #6d8195;
+	font-size: 0.92rem;
+}
+
+.ZAB-status-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 12px;
+	border-radius: 999px;
+	font-size: 0.85rem;
+	font-weight: 800;
+	text-transform: capitalize;
+	white-space: nowrap;
+}
+
+.status-pending { background: #fff3db; color: #9f5c00; }
+.status-approved { background: #e6f7ee; color: #1f7a4b; }
+.status-cancelled { background: #ffe6e6; color: #ab2626; }
+.status-visited { background: #e7f0ff; color: #1f5ea8; }
+
+.ZAB-inline-status-form {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.ZAB-inline-status-form select {
+	min-width: 140px;
+}
+
+.ZAB-admin-settings-panel {
+	max-width: 1080px;
+}
+
+.ZAB-field-grid-admin {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px;
+	margin-bottom: 18px;
+}
+
+.ZAB-field-grid-admin label {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-weight: 700;
+}
+
+.ZAB-toggle-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+	margin: 10px 0 18px;
+	font-weight: 700;
+}
+
+.ZAB-toggle-row input {
+	margin-right: 8px;
+	accent-color: var(--ZAB-admin-orange);
+}
+
+@media (max-width: 900px) {
+	.ZAB-template-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 1200px) {
+	.ZAB-admin-action-strip {
+		grid-template-columns: 1fr;
+	}
+
+	.ZAB-admin-stats-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.ZAB-admin-toolbar {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.ZAB-field-grid-admin {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 782px) {
+	.ZAB-admin-panel-header,
+	.ZAB-admin-toolbar {
+		grid-template-columns: 1fr;
+		display: grid;
+	}
+
+	.ZAB-admin-stats-grid {
+		grid-template-columns: 1fr;
+	}
+}
